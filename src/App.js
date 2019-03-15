@@ -4,11 +4,15 @@ import buildGraphcoolProvider from 'ra-data-graphcool'
 import users from './components/users'
 import posts from './components/posts'
 import { Route } from 'react-router-dom';
+// import Form from './components/form';
+import PersonCreate from './components/persons/create'
+import MapResult from './components/MapResult'
 
-function About() {
-  return <h2>About</h2>;
+function Form () {
+  return (
+    <h1>hello</h1>
+  )
 }
-
 
 export default class App extends React.Component {
   constructor() {
@@ -19,7 +23,7 @@ export default class App extends React.Component {
   async componentDidMount() {
     const dataProvider = await buildGraphcoolProvider({
       clientOptions: {
-        uri: 'https://api.graph.cool/simple/v1/cjt49cvhf3nb001897ecqnyqs'
+        uri: 'https://api.graph.cool/simple/v1/cjta4329e6hot0182ceqf6y92'
       }
     })
 
@@ -37,13 +41,15 @@ export default class App extends React.Component {
       <Admin dataProvider={dataProvider}  customRoutes={[
         <Route
             exact
-            path="/about"
-            component={About}
-            noLayout/>]}
+            path="/map"
+            component={MapResult}
+            noLayout
+            />]}
         >
         {/* <Resource name="Post" list={PostList} edit={PostEdit} create={PostCreate} remove={Delete} /> */}
         <Resource name="User" list={ListGuesser} {...users} />
         {/* <Resource name="Post" list={ListGuesser} {...posts} /> */}
+        {/* <Resource name="Person" list={ListGuesser} create={PersonCreate} noLayout/> */}
       </Admin>
     )
   }

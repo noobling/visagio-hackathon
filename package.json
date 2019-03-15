@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "gh-pages": "^2.0.1",
     "graphql": "^14.1.1",
     "ra-data-graphcool": "^2.6.0",
     "react": "^16.8.4",
@@ -14,7 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,5 +37,6 @@
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.4.0",
     "prettier": "^1.16.4"
-  }
+  },
+  "homepage": "https://noobling.github.io/visagio-hackathon"
 }
