@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/visagio-hackathon/static/js/runtime~main.73167c03.js"
   },
   {
-    "revision": "b081e6cf1aae8e55921a",
-    "url": "/visagio-hackathon/static/js/main.570f8794.chunk.js"
+    "revision": "5fb8aa2b7bf7dc6491f1",
+    "url": "/visagio-hackathon/static/js/main.b53bfc27.chunk.js"
   },
   {
     "revision": "378c06f978d13efad034",
     "url": "/visagio-hackathon/static/js/2.1c4b3889.chunk.js"
   },
   {
-    "revision": "b081e6cf1aae8e55921a",
+    "revision": "5fb8aa2b7bf7dc6491f1",
     "url": "/visagio-hackathon/static/css/main.738bb689.chunk.css"
   },
   {
-    "revision": "56d6fecf8add27139df694cfe5c1b225",
+    "revision": "bf1df70bac99899dd7c496fe3bc2b02c",
     "url": "/visagio-hackathon/index.html"
   }
 ];
