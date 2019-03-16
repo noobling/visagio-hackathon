@@ -10,6 +10,7 @@ import MapResult from './components/MapResult'
 import Spinner from './components/Spinner'
 import Dashboard from './components/Dashboard'
 import authProvider from './components/authProvider'
+import UserList from './components/users/UserList'
 
 function Form () {
   return (
@@ -26,7 +27,7 @@ export default class App extends React.Component {
   async componentDidMount() {
     const dataProvider = await buildGraphcoolProvider({
       clientOptions: {
-        uri: 'https://api.graph.cool/simple/v1/cjta4329e6hot0182ceqf6y92'
+        uri: 'https://api.graph.cool/simple/v1/cjt49cvhf3nb001897ecqnyqs'
       }
     })
 
@@ -51,7 +52,7 @@ export default class App extends React.Component {
         >
         {/* <Resource name="Post" list={PostList} edit={PostEdit} create={PostCreate} remove={Delete} /> */}
         
-        <Resource name="User" list={ListGuesser} {...users} options={{ label: 'Data', title: 'Data' }} />
+        <Resource name="User" list={UserList} {...users} options={{ label: 'Data', title: 'Data' }} />
   
         {/* <Resource name="Post" list={ListGuesser} {...posts} /> */}
         {/* <Resource name="Person" list={ListGuesser} create={PersonCreate} noLayout/> */}

@@ -1,4 +1,5 @@
 import React from 'react'
+import Typography from '@material-ui/core/Typography';
 import {
   Create,
   SimpleForm,
@@ -6,7 +7,7 @@ import {
   NumberInput,
   SelectInput,
   SaveButton,
-  Toolbar
+  Toolbar,
 } from 'react-admin'
 
 const incomeChoices = [
@@ -38,8 +39,13 @@ const CustomToolbar = props => (
 export default props => (
 <Create {...props} title="Find Place to Stay" >
     <SimpleForm toolbar={<CustomToolbar />}>
-  <h1>Find a Home </h1>
-
+        <h1 style={{fontSize: '3em', fontWeight: '100'}}>Find a house</h1>
+        <h2 style={{fontSize: '2em', fontWeight: '100'}}>House Details</h2>
+        <NumberInput source="numberOfBedrooms" />
+        <NumberInput source="numberOfBathrooms" />
+        <NumberInput source="carspace" />
+        <TextInput source="other" />
+        <h2 style={{fontSize: '2em', fontWeight: '100'}}>Your Details</h2>
         <TextInput source="name" />
         <NumberInput source="age" />
         <SelectInput source="income" choices={incomeChoices} />
