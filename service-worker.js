@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/visagio-hackathon/precache-manifest.1f08ac80b03814c7d4d48513c0c811a1.js"
+  "/visagio-hackathon/precache-manifest.3413fc05b660ff3ae9ed22afe2acbf86.js"
 );
 
 workbox.clientsClaim();
