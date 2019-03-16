@@ -9,7 +9,8 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-
+import MapCard from './MapCard'
+import Grid from '@material-ui/core/Grid';
 const styles = {
   card: {
     maxWidth: 345,
@@ -21,7 +22,7 @@ const styles = {
   container: {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: '100px',
+    marginTop: '100px'
   }
 };
 const MyCard =  (props) => {
@@ -31,37 +32,26 @@ const MyCard =  (props) => {
   <div  className={classes.container}>
   <AppBar >
         <Toolbar>
-          <Typography variant="h6" color="inherit">
+          <Typography variant="h6" color="inherit" onClick={() => window.location.href="/#"}>
             Mapper
           </Typography>
         </Toolbar>
       </AppBar>
-  <Card className={classes.card}>
-        <CardMedia
-          component="img"
-          alt="Contemplative Reptile"
-          className={classes.media}
-          height="300"
-          image="/armadale.png"
-          title="Armadale"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Your most suitable location is Armadale
-          </Typography>
-          <Typography component="p">
-            Using advanced AI we have determined this to be the best place for you.
-          </Typography>
-        </CardContent>
-      <CardActions>
-        <Button size="small" color="primary" onClick={() => window.location.href="/#/user/create"}>
-          Back to Search Page
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
-    </Card>
+      <Grid container style={{paddingLeft: '20px'}} spacing={16}>
+        <Grid item xs={12}>
+    <Grid container justify="center">
+      <Grid xs={12} md={4} item>
+      <MapCard img='/armadale.png' title="Armadale" matchAmount={90}  />
+      </Grid>
+      <Grid xs={12} md={4}>
+      <MapCard img='/karrinyup.png' title="Karrinyup" matchAmount={80} />
+      </Grid>
+      <Grid xs={12} md={4} item>
+      <MapCard img='/thornlie.png' title="Thornlie" matchAmount={50} />
+      </Grid>
+      </Grid>
+      </Grid>
+    </Grid>
   </div>
 )}
 

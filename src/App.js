@@ -7,6 +7,9 @@ import { Route } from 'react-router-dom';
 // import Form from './components/form';
 import PersonCreate from './components/persons/create'
 import MapResult from './components/MapResult'
+import Spinner from './components/Spinner'
+import Dashboard from './components/Dashboard'
+import authProvider from './components/authProvider'
 
 function Form () {
   return (
@@ -34,11 +37,11 @@ export default class App extends React.Component {
     const { dataProvider } = this.state
 
     if (!dataProvider) {
-      return <div>Loading</div>
+      return <Spinner />
     }
 
     return (
-      <Admin dataProvider={dataProvider}  customRoutes={[
+      <Admin dataProvider={dataProvider} dashboard={Dashboard} authProvider={authProvider} customRoutes={[
         <Route
             exact
             path="/map"
@@ -47,7 +50,7 @@ export default class App extends React.Component {
             />]}
         >
         {/* <Resource name="Post" list={PostList} edit={PostEdit} create={PostCreate} remove={Delete} /> */}
-        <Resource name="User" list={ListGuesser} {...users} />
+        <Resource name="User" list={ListGuesser} {...users} options={{ label: 'Data', title: 'Data' }} />
         {/* <Resource name="Post" list={ListGuesser} {...posts} /> */}
         {/* <Resource name="Person" list={ListGuesser} create={PersonCreate} noLayout/> */}
       </Admin>
