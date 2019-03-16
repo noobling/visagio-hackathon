@@ -50,7 +50,9 @@ export default class App extends React.Component {
             />]}
         >
         {/* <Resource name="Post" list={PostList} edit={PostEdit} create={PostCreate} remove={Delete} /> */}
+        
         <Resource name="User" list={ListGuesser} {...users} options={{ label: 'Data', title: 'Data' }} />
+  
         {/* <Resource name="Post" list={ListGuesser} {...posts} /> */}
         {/* <Resource name="Person" list={ListGuesser} create={PersonCreate} noLayout/> */}
       </Admin>
